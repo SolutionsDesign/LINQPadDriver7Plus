@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<AssemblyName>SD.LLBLGen.Pro.LINQPadDriver7Plus</AssemblyName>
+		<SignAssembly>false</SignAssembly>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Authors>Solutions Design bv</Authors>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageLicenseUrl>https://www.llblgen.com/Pages/buy.aspx</PackageLicenseUrl>
+		<PackageProjectUrl>https://www.llblgen.com/</PackageProjectUrl>
+		<PackageTags>LLBLGen Pro ORMSupportClasses Database Data O/RM ADO.NET</PackageTags>
+		<GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+	</PropertyGroup>
+	<PropertyGroup>
+		<DefineConstants>NETCORE</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="linqpad-samples\**" />
+		<EmbeddedResource Remove="linqpad-samples\**" />
+		<None Remove="linqpad-samples\**" />
+		<Page Remove="linqpad-samples\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="LINQPad.Reference" Version="1.*" />
+		<PackageReference Include="SD.LLBLGen.Pro.ORMSupportClasses" Version="5.8.3" />
+		<PackageReference Include="SD.Tools.OrmProfiler.Interceptor.NetCore" Version="2.0.3" />
+	</ItemGroup>
+	<Target Name="PostBuild1" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /i/y/s &quot;$(TargetDir)*.*&quot; &quot;%25LocalAppData%25\\LINQPad\\Drivers\\DataContext\\NetCore\\$(TargetName)&quot;" />
+	</Target>
+</Project>
