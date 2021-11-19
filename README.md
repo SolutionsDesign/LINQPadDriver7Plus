@@ -1,17 +1,21 @@
-LLBLGen Pro LINQPad Driver
+LLBLGen Pro LINQPad Driver for LINQPad v7+
 ===========================
-The Official [LLBLGen Pro](https://www.llblgen.com) LINQPad driver. This repository is the continuation of the Codeplex repository at
-https://llblgenlinqpad.codeplex.com/. For the sourcecode of the Linqpad driver for LLBLGen Pro v4.1 or earlier
-please visit the codeplex repository. 
-
-### How to compile the sourcecode
-To compile the sourcecode, make sure you place the files mentioned in \Externals\FilesToPlaceHere.txt into 
-the folder \Externals before compiling. It can be DevDeploy(4).bat fails after compilation. Adjust the paths
-in those bat files or remove the post-build event. If you copied LINQPad.exe v4.40 or higher in the Externals
-folder, you have to change the target framework to .NET 4 for the driver project to compile the code. 
+The Official [LLBLGen Pro](https://www.llblgen.com) LINQPad driver for LINQPad v7+, built on .NET 6. 
 
 ### How to distribute the driver
 To distribute the driver, zip the dll and header.xml into a zip file and rename the extension to .lpx. 
+
+### Supported databases and generated code
+The generated code has to be built against .NET Standard 2.0 or higher. The supported databases are:
+
+* MS Access
+* DB2
+* Firebird
+* Oracle (using managed ODP.NET)
+* PostgreSQL
+* SQL Server.
+
+The driver will pull the necessary ADO.NET provider packages from Nuget, hence there's no MySQL support.
 
 ### Executing SQL
 The driver isn't designed to be used to execute SQL against a database, though it will work if the following
