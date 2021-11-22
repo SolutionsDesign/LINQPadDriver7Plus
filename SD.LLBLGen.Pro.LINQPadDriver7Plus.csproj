@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
-		<AssemblyName>SD.LLBLGen.Pro.LINQPadDriver7Plus</AssemblyName>
+		<AssemblyName>SD.LLBLGen.Pro.LINQPadDriver7Plusv58</AssemblyName>
 		<SignAssembly>false</SignAssembly>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Authors>Solutions Design bv</Authors>

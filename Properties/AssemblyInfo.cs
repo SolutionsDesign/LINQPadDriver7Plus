@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("LLBLGen Pro LINQPad Driver")]
 [assembly: AssemblyDescription("LINQPad driver for LLBLGen Pro v5.8")]
-[assembly: AssemblyConfiguration(".NET 4.6.2")]
+[assembly: AssemblyConfiguration(".NET 6")]
 [assembly: AssemblyCompany("Solutions Design bv")]
 [assembly: AssemblyProduct("LLBLGen Pro")]
 [assembly: AssemblyCopyright("Copyright ©2021 Solutions Design bv")]
