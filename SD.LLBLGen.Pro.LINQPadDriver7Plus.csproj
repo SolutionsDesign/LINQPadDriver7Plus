@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
-		<AssemblyName>SD.LLBLGen.Pro.LINQPadDriver7Plusv510</AssemblyName>
+		<AssemblyName>SD.LLBLGen.Pro.LINQPadDriver7Plusv511</AssemblyName>
 		<SignAssembly>false</SignAssembly>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<Authors>Solutions Design bv</Authors>
@@ -23,8 +23,8 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="LINQPad.Reference" Version="1.3.0" />
-		<PackageReference Include="SD.LLBLGen.Pro.ORMSupportClasses" Version="5.10.0" />
-		<PackageReference Include="SD.Tools.OrmProfiler.Interceptor.NetCore" Version="2.0.6" />
+		<PackageReference Include="SD.LLBLGen.Pro.ORMSupportClasses" Version="5.10.2" />
+		<PackageReference Include="SD.Tools.OrmProfiler.Interceptor.NetCore" Version="2.0.7" />
 	</ItemGroup>
 	<Target Name="PostBuild1" AfterTargets="PostBuildEvent">
 		<Exec Command="xcopy /i/y/s &quot;$(TargetDir)*.*&quot; &quot;%25LocalAppData%25\\LINQPad\\Drivers\\DataContext\\NetCore\\$(TargetName)&quot;" />
